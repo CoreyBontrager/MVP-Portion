@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Grocery Price Comparison App</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1><a href="index.html">Grocery Price Comparison</a></h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><input id="search-input" type="text" placeholder="Search products..."></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="catalog">
+            <h2>Product Catalog</h2>
+            <div id="catalog-controls" class="controls">
+                <label for="sort-select">Sort:</label>
+                <select id="sort-select">
+                    <option value="none">None</option>
+                    <option value="price-asc">Price: Low → High</option>
+                    <option value="price-desc">Price: High → Low</option>
+                    <option value="size-asc">Size: Low → High</option>
+                    <option value="size-desc">Size: High → Low</option>
+                    <option value="brand-asc">Brand: A → Z</option>
+                    <option value="brand-desc">Brand: Z → A</option>
+                </select>
+            </div>
+            <ul id="catalog-items" class="products"></ul>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
